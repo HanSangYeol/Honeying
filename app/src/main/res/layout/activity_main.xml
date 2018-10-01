@@ -22,49 +22,52 @@
                 class="kr.ac.doowon.honeying.Fragment.Category_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:layout= "@layout/fragment_category"/>
+                tools:layout="@layout/fragment_category" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/recommendFragLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
             <fragment
                 android:id="@+id/recommendFragment"
-                class="kr.ac.doowon.honeying.Fragment.Category_Fragment"
+                class="kr.ac.doowon.honeying.Fragment.Menu_Recommend_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:layout= "@layout/fragment_category"/>
+                tools:layout="@layout/fragment_menu_recommend" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/reviewFragLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
             <fragment
                 android:id="@+id/reviewFragment"
-                class="kr.ac.doowon.honeying.Fragment.Category_Fragment"
+                class="kr.ac.doowon.honeying.Fragment.Review_Recommend_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:layout= "@layout/fragment_category"/>
+                tools:layout="@layout/fragment_review_recommend" />
 
         </LinearLayout>
+
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/mypageFragLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="gone">
 
             <fragment
                 android:id="@+id/mypageFragment"
-                class="kr.ac.doowon.honeying.Fragment.Category_Fragment"
+                class="kr.ac.doowon.honeying.Fragment.MyPage_Fragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:layout= "@layout/fragment_category"/>
+                tools:layout="@layout/fragment_mypage" />
 
         </LinearLayout>
     </FrameLayout>
@@ -73,6 +76,8 @@
         android:id="@+id/bottomNavi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:itemIconTint="@color/textColor"
+        app:itemTextColor="@color/textColor"
         app:menu="@menu/bottom_navi">
 
     </android.support.design.widget.BottomNavigationView>

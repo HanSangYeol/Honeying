@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/action_one"
+        android:id="@+id/category_action"
+        android:enabled="true"
         android:icon="@drawable/category"
         android:title="카테고리" />
     <item
-        android:id="@+id/action_two"
+        android:id="@+id/recommend_action"
+        android:enabled="true"
         android:icon="@drawable/recommend"
-        android:title="메뉴추천"/>
+        android:title="메뉴추천" />
     <item
-        android:id="@+id/action_three"
+        android:id="@+id/review_action"
+        android:enabled="true"
         android:icon="@drawable/review"
-        android:title="리뷰"/>
+        android:title="베스트 리뷰" />
     <item
-        android:id="@+id/action_four"
-        android:icon="@drawable/mypage"
-        android:title="마이페이지"/>
+        android:id="@+id/mypage_action"
+        android:enabled="true"
+        android:icon="@drawable/bee"
+        android:title="마이페이지" />
 
 </menu>

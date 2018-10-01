@@ -34,31 +34,30 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setupEvents() {
-        final LinearLayout[] frags = {CategoryFragLayout, recommendFragLayout, reviewFragLayout, mypageFragLayout};
 
         bottomNavi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.CategoryFragLayout:
+                    case R.id.category_action:
                         CategoryFragLayout.setVisibility(View.VISIBLE);
                         recommendFragLayout.setVisibility(View.GONE);
                         reviewFragLayout.setVisibility(View.GONE);
                         mypageFragLayout.setVisibility(View.GONE);
                         return true;
-                    case R.id.recommendFragLayout:
+                    case R.id.recommend_action:
                         CategoryFragLayout.setVisibility(View.GONE);
                         recommendFragLayout.setVisibility(View.VISIBLE);
                         reviewFragLayout.setVisibility(View.GONE);
                         mypageFragLayout.setVisibility(View.GONE);
                         return true;
-                    case R.id.reviewFragLayout:
+                    case R.id.review_action:
                         CategoryFragLayout.setVisibility(View.GONE);
                         recommendFragLayout.setVisibility(View.GONE);
                         reviewFragLayout.setVisibility(View.VISIBLE);
                         mypageFragLayout.setVisibility(View.GONE);
                         return true;
-                    case R.id.mypageFragLayout:
+                    case R.id.mypage_action:
                         CategoryFragLayout.setVisibility(View.GONE);
                         recommendFragLayout.setVisibility(View.GONE);
                         reviewFragLayout.setVisibility(View.GONE);
