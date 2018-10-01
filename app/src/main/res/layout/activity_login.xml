@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:speed="0.1dp"
-        android:scaleX="3.2"
-        android:scaleY="3.2"
+        android:scaleX="1.3"
+        android:scaleY="3.3"
         app:src="@drawable/background_login"/>
     <LinearLayout
         android:focusable="true"
@@ -76,6 +76,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/findidBtn"
                 android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,6 +86,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/findpwBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -100,6 +102,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:id="@+id/passBtn"
             android:textColor="@color/textColor"
             android:textSize="14sp"
             android:textStyle="bold"
@@ -112,6 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <TextView
+            android:id="@+id/signupBtn"
             android:textColor="@color/textColor"
             android:textSize="14sp"
             android:textStyle="bold"
