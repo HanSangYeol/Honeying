@@ -13,11 +13,12 @@
         android:id="@+id/rogoImg"
         android:layout_width="250dp"
         android:layout_height="250dp" />
-    <TextView
+    <com.romainpiel.shimmer.ShimmerTextView
         android:textColor="@color/textColor"
         android:textStyle="bold"
         android:textSize="42sp"
         android:text="honeying"
+        android:id="@+id/shimmerTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

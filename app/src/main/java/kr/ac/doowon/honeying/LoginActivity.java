@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.QuickContactBadge;
 import android.widget.TextView;
 
 import com.q42.android.scrollingimageview.ScrollingImageView;
@@ -19,6 +18,8 @@ public class LoginActivity extends BaseActivity {
     private android.widget.TextView passBtn;
     private android.widget.TextView signupBtn;
 
+    public static LoginActivity loginActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +32,7 @@ public class LoginActivity extends BaseActivity {
     @Override
     public void setValues() {
         scrollView.setAlpha(0.5f);
+        loginActivity = this;
     }
 
     @Override
@@ -48,7 +50,6 @@ public class LoginActivity extends BaseActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, SignUpActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
     }

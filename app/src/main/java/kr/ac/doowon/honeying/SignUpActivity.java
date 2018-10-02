@@ -1,8 +1,12 @@
 package kr.ac.doowon.honeying;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class SignUpActivity extends BaseActivity {
@@ -11,6 +15,8 @@ public class SignUpActivity extends BaseActivity {
 
     private android.widget.Spinner monthspinner;
     private android.widget.Spinner dayspinner;
+    private android.widget.ImageView backBtn;
+    private android.widget.TextView singupBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,20 +33,39 @@ public class SignUpActivity extends BaseActivity {
         monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         monthspinner.setAdapter(monthAdapter);
 
-        ArrayAdapter dayAdapter = ArrayAdapter.createFromResource(this, R.array.date_month, android.R.layout.simple_spinner_item);
+        ArrayAdapter dayAdapter = ArrayAdapter.createFromResource(this, R.array.date_day, android.R.layout.simple_spinner_item);
         dayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dayspinner.setAdapter(dayAdapter);
     }
 
     @Override
     public void setupEvents() {
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        singupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //TODO 회원가입
+                Intent intent = new Intent(mContext, MainActivity.class);
+                startActivity(intent);
+                Toast.makeText(mContext, "회원가입이 완료 되었습니다.", Toast.LENGTH_SHORT).show();
+                finish();
+                LoginActivity.loginActivity.finish();
+            }
+        });
 
     }
 
     @Override
     public void bindView() {
+        this.singupBtn = (TextView) findViewById(R.id.singupBtn);
         this.dayspinner = (Spinner) findViewById(R.id.dayspinner);
         this.monthspinner = (Spinner) findViewById(R.id.monthspinner);
+        this.backBtn = (ImageView) findViewById(R.id.backBtn);
     }
 
     @Override
