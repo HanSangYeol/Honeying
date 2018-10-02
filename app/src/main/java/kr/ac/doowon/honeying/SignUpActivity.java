@@ -1,12 +1,16 @@
 package kr.ac.doowon.honeying;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class SignUpActivity extends BaseActivity {
 
     long backPressedTimeInMillis = 0;
+
+    private android.widget.Spinner monthspinner;
+    private android.widget.Spinner dayspinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +23,13 @@ public class SignUpActivity extends BaseActivity {
 
     @Override
     public void setValues() {
+        ArrayAdapter monthAdapter = ArrayAdapter.createFromResource(this, R.array.date_month, android.R.layout.simple_spinner_item);
+        monthAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        monthspinner.setAdapter(monthAdapter);
 
+        ArrayAdapter dayAdapter = ArrayAdapter.createFromResource(this, R.array.date_month, android.R.layout.simple_spinner_item);
+        dayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        dayspinner.setAdapter(dayAdapter);
     }
 
     @Override
@@ -29,7 +39,8 @@ public class SignUpActivity extends BaseActivity {
 
     @Override
     public void bindView() {
-
+        this.dayspinner = (Spinner) findViewById(R.id.dayspinner);
+        this.monthspinner = (Spinner) findViewById(R.id.monthspinner);
     }
 
     @Override

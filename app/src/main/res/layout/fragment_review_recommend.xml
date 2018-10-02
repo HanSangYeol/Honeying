@@ -5,6 +5,7 @@
     android:layout_height="match_parent">
 
     <FrameLayout
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
@@ -38,6 +39,7 @@
         android:layout_height="1dp"
         android:background="@color/divider_gray_line" />
     <ListView
+        android:background="#DEDEDE"
         android:id="@+id/reviewListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

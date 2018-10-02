@@ -1,3 +1,50 @@
 <resources>
     <string name="app_name">Honeying</string>
+    <string-array name="date_month">
+        <item>1 월</item>
+        <item>2 월</item>
+        <item>3 월</item>
+        <item>4 월</item>
+        <item>5 월</item>
+        <item>6 월</item>
+        <item>7 월</item>
+        <item>8 월</item>
+        <item>9 월</item>
+        <item>10월</item>
+        <item>11월</item>
+        <item>12월</item>
+    </string-array>
+    <string-array name="date_day">
+        <item>1 일</item>
+        <item>2 일</item>
+        <item>3 일</item>
+        <item>4 일</item>
+        <item>5 일</item>
+        <item>6 일</item>
+        <item>7 일</item>
+        <item>8 일</item>
+        <item>9 일</item>
+        <item>10일</item>
+        <item>11일</item>
+        <item>12일</item>
+        <item>13일</item>
+        <item>14일</item>
+        <item>15일</item>
+        <item>16일</item>
+        <item>17일</item>
+        <item>18일</item>
+        <item>19일</item>
+        <item>20일</item>
+        <item>21일</item>
+        <item>22일</item>
+        <item>23일</item>
+        <item>24일</item>
+        <item>25일</item>
+        <item>26일</item>
+        <item>27일</item>
+        <item>28일</item>
+        <item>29일</item>
+        <item>30일</item>
+        <item>31일</item>
+    </string-array>
 </resources>
