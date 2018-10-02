@@ -1,7 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
+    android:background="@color/white"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:background="@drawable/box_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_margin="10dp"
+                android:src="@drawable/man"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                android:textColor="@color/textColor"
+                android:text="닉네임"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/pin"
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="지역 + 가게이름"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="| 리뷰 내용"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/review1"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/review2"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:src="@drawable/review3"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+
+            <ImageView
+                android:layout_gravity="center|right"
+                android:layout_margin="20dp"
+                android:src="@drawable/more"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="60dp">
+                <ImageView
+                    android:padding="7dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/heart"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColor"
+                    android:text="32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="40dp"
+                android:layout_height="60dp">
+                <ImageView
+                    android:padding="7dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/comment"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColor"
+                    android:text="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

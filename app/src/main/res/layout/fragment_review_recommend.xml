@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="#FFFFCC"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,6 +8,39 @@
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:text="지역선택"/>
+
+        <ImageView
+            android:src="@drawable/dropdown"
+            android:layout_marginLeft="70dp"
+            android:padding="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|left" />
+
+        <ImageView
+            android:id="@+id/seemapBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|right"
+            android:padding="6dp"
+            android:src="@drawable/filter" />
     </FrameLayout>
-    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray" />
+    <ListView
+        android:id="@+id/reviewListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
 </LinearLayout>

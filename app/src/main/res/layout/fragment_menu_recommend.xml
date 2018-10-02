@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:background="#FFFF00"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:text="파주"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="50dp"
+            android:text="두원공과대학교 컴퓨터공학과"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/seemapBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center|right"
+            android:padding="6dp"
+            android:src="@drawable/filter" />
+    </FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightgray" />
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/ing"
+            android:layout_width="300dp"
+            android:layout_height="300dp" />
+    </LinearLayout>
 </LinearLayout>
