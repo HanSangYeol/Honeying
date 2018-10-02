@@ -47,4 +47,15 @@
         <item>30일</item>
         <item>31일</item>
     </string-array>
+    <string-array name="titles">
+        <item>전체</item>
+        <item>한식</item>
+        <item>분식</item>
+        <item>중식</item>
+        <item>일식</item>
+        <item>파스타</item>
+        <item>돈까스</item>
+        <item>족발ㆍ보쌈</item>
+        <item>카페ㆍ디저트</item>
+    </string-array>
 </resources>

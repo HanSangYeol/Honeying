@@ -5,18 +5,19 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/white">
 
         <TextView
-            android:layout_gravity="center|left"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/textColor"
-            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="두원공과 대학교 컴퓨터 공학과"/>
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:text="두원공과대학교 컴퓨터 공학과"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
         <ImageView
             android:id="@+id/searchBtn"
             android:layout_width="50dp"
@@ -34,10 +35,12 @@
             android:padding="10dp"
             android:src="@drawable/map" />
     </FrameLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_gray_line" />
+
     <ViewFlipper
         android:id="@+id/bannerFlipper"
         android:layout_width="match_parent"
@@ -61,10 +64,12 @@
             android:layout_height="match_parent"
             android:scaleType="matrix" />
     </ViewFlipper>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="@color/lightgray" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -77,12 +82,14 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/allBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="#F2D800"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="0">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -105,11 +112,13 @@
                 android:background="@color/lightgray" />
 
             <LinearLayout
+                android:id="@+id/koreanBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="1">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -132,11 +141,13 @@
                 android:background="@color/lightgray" />
 
             <LinearLayout
+                android:id="@+id/snackbarBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="2">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -165,11 +176,13 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/chineseBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="3">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -192,11 +205,13 @@
                 android:background="@color/lightgray" />
 
             <LinearLayout
+                android:id="@+id/japaneseBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="4">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -219,12 +234,14 @@
                 android:background="@color/lightgray" />
 
             <LinearLayout
+                android:id="@+id/pastaBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/skyblue"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="5">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -253,11 +270,13 @@
             android:layout_weight="1">
 
             <LinearLayout
+                android:id="@+id/porkcutletBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="6">
 
                 <ImageView
                     android:layout_width="60dp"
@@ -280,10 +299,12 @@
                 android:background="@color/lightgray" />
 
             <LinearLayout
+                android:id="@+id/porkfeetBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:gravity="center"
+                android:tag="7">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -316,11 +337,13 @@
                 android:background="@color/lightgray" />
 
             <LinearLayout
+                android:id="@+id/cafeBtn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:tag="8">
 
                 <ImageView
                     android:layout_width="60dp"
