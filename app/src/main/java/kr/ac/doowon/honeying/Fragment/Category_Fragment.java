@@ -16,6 +16,7 @@ import android.widget.ViewFlipper;
 
 import com.bumptech.glide.Glide;
 
+import kr.ac.doowon.honeying.GoogleMapActivity;
 import kr.ac.doowon.honeying.R;
 import kr.ac.doowon.honeying.RestaurantListActivity;
 
@@ -99,5 +100,13 @@ public class Category_Fragment extends Fragment{
         porkcutletBtn.setOnClickListener(onClickListener);
         porkfeetBtn.setOnClickListener(onClickListener);
         cafeBtn.setOnClickListener(onClickListener);
+
+        seemapBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), GoogleMapActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

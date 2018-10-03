@@ -2,6 +2,106 @@
 <LinearLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:gravity="center|left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/restaurantTxt"
+                android:textColor="@color/softorange"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="가게 이름"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/star_orange"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <TextView
+                    android:id="@+id/goodpointTxt"
+                    android:textColor="@color/softorange"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="2dp"
+                    android:text="평점"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/divider_gray_line"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="10dp"
+                    android:text="리뷰"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/reviewTxt"
+                    android:textColor="@color/divider_gray_line"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="2dp"
+                    android:text="3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/divider_gray_line"
+                    android:layout_gravity="center|left"
+                    android:text="개"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/pin"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/divider_gray_line"
+                    android:layout_gravity="center|left"
+                    android:text="거리"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/distanceTxt"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/divider_gray_line"
+                    android:layout_gravity="center|left"
+                    android:text="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="@color/divider_gray_line"
+                    android:layout_gravity="center|left"
+                    android:text="km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
 </LinearLayout>

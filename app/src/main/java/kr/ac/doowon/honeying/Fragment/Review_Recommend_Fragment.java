@@ -46,6 +46,6 @@ public class Review_Recommend_Fragment extends Fragment {
     }
 
     private void setupEvents(){
-
+        //TODO https://github.com/ChadCSong/ShineButton
     }
 }

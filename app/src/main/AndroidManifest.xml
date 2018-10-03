@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="kr.ac.doowon.honeying.API_KEY"
+            android:value="AIzaSyDs-Nm9Eu2cAXeCfwZ2P7gkGzpsJyI3BbQ " />
+
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -20,7 +24,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".SettingActivity" />
-        <activity android:name=".RestaurantListActivity"></activity>
+        <activity android:name=".RestaurantListActivity" />
+        <activity android:name=".RestaurantDetailActivity" />
+        <activity android:name=".WriteReviewActivity" />
+        <activity android:name=".GoogleMapActivity"></activity>
     </application>
 
 </manifest>

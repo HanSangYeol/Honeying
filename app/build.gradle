@@ -33,4 +33,8 @@ dependencies {
     implementation 'com.romainpiel.shimmer:library:1.4.0@aar'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'junit:junit:4.12'
+    implementation 'com.sackcentury:shinebutton:0.2.0'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
 }
