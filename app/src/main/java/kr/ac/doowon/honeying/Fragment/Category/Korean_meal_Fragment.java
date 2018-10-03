@@ -11,17 +11,19 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import kr.ac.doowon.honeying.Adapter.RestaurantAdapter;
 import kr.ac.doowon.honeying.Data.Restaurant;
 import kr.ac.doowon.honeying.R;
 import kr.ac.doowon.honeying.RestaurantDetailActivity;
+import kr.ac.doowon.honeying.Util.GlobalUtil;
 
 public class Korean_meal_Fragment extends Fragment {
 
     RestaurantAdapter restaurantAdapter;
-    List<Restaurant> restaurantList;
+    List<Restaurant> restaurantList = new ArrayList<>();
     private android.widget.ListView Listview;
 
     @Nullable
@@ -44,11 +46,26 @@ public class Korean_meal_Fragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getActivity(), RestaurantDetailActivity.class);
+                intent.putExtra("titleImg", restaurantList.get(i).getStoreimg());
+                intent.putExtra("titleTxt", restaurantList.get(i).getShopname());
+                intent.putExtra("areaTxt", restaurantList.get(i).getArea());
+                intent.putExtra("ratingTxt", restaurantList.get(i).getGrade());
+                intent.putExtra("longitude", restaurantList.get(i).getLongitude());
+                intent.putExtra("latitude", restaurantList.get(i).getLatitude());
+                intent.putExtra("distanceTxt", restaurantList.get(i).getGrade());
+                intent.putExtra("reviewTxt", restaurantList.get(i).getReview());
                 startActivity(intent);
             }
         });
     }
     private void setValues(){
+        GlobalUtil.RESTAURANT_DATA();
+
+        for (Restaurant restaurant : GlobalUtil.RESTAURANT_LIST){
+            if (restaurant.getCategory() == 0){
+                restaurantList.add(restaurant);
+            }
+        }
         restaurantAdapter = new RestaurantAdapter(getActivity(), restaurantList);
         Listview.setAdapter(restaurantAdapter);
 

@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.balysv.materialripple.MaterialRippleLayout;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 import kr.ac.doowon.honeying.R;
 import kr.ac.doowon.honeying.SettingActivity;
@@ -19,30 +21,28 @@ import kr.ac.doowon.honeying.SettingActivity;
 public class MyPage_Fragment extends Fragment {
 
     private android.widget.ImageView settingBtn;
-    private android.widget.ImageView shoppingbasketBtn;
     private android.widget.ImageView profileImg;
     private android.widget.TextView nameTxt;
     private android.widget.TextView savemoneyTxt;
     private android.widget.TextView pointTxt;
     private android.widget.LinearLayout loginstatus;
-    private de.hdodenhof.circleimageview.CircleImageView orderinquiryBtn;
-    private de.hdodenhof.circleimageview.CircleImageView itemofinterestBtn;
-    private android.widget.LinearLayout consultingBtn;
-    private android.widget.LinearLayout myconsultingBtn;
-    private android.widget.LinearLayout estimateconsultingBtn;
     private de.hdodenhof.circleimageview.CircleImageView reviewBtn;
     private de.hdodenhof.circleimageview.CircleImageView favoriteBtn;
-    private android.widget.LinearLayout questionBtn;
-    private android.widget.LinearLayout registerBtn;
-    private android.widget.LinearLayout eventBtn;
+    private com.balysv.materialripple.MaterialRippleLayout questionBtn;
+    private com.balysv.materialripple.MaterialRippleLayout mylistBtn;
+    private com.balysv.materialripple.MaterialRippleLayout registerBtn;
+    private com.balysv.materialripple.MaterialRippleLayout eventBtn;
+    private com.balysv.materialripple.MaterialRippleLayout noticeBtn;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mypage, container, false);
-        this.eventBtn = (LinearLayout) view.findViewById(R.id.eventBtn);
-        this.registerBtn = (LinearLayout) view.findViewById(R.id.registerBtn);
-        this.questionBtn = (LinearLayout) view.findViewById(R.id.questionBtn);
+        this.noticeBtn = (MaterialRippleLayout) view.findViewById(R.id.noticeBtn);
+        this.eventBtn = (MaterialRippleLayout) view.findViewById(R.id.eventBtn);
+        this.registerBtn = (MaterialRippleLayout) view.findViewById(R.id.registerBtn);
+        this.mylistBtn = (MaterialRippleLayout) view.findViewById(R.id.mylistBtn);
+        this.questionBtn = (MaterialRippleLayout) view.findViewById(R.id.questionBtn);
         this.favoriteBtn = (CircleImageView) view.findViewById(R.id.favoriteBtn);
         this.reviewBtn = (CircleImageView) view.findViewById(R.id.reviewBtn);
         this.loginstatus = (LinearLayout) view.findViewById(R.id.loginstatus);
@@ -65,12 +65,42 @@ public class MyPage_Fragment extends Fragment {
 
     }
 
-    private void setEvent(){
+    private void setEvent() {
         settingBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), SettingActivity.class);
                 startActivity(intent);
+            }
+        });
+        questionBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        mylistBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        eventBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        noticeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
             }
         });
     }

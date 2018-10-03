@@ -9,8 +9,10 @@ public class Restaurant {
     private java.lang.String area;
     private float street;
     private int category;
+    private float longitude;
+    private float latitude;
 
-    public Restaurant(int ID, java.lang.String storeimg, java.lang.String shopname, int grade, int review, java.lang.String area, float street, int category) {
+    public Restaurant(int ID, String storeimg, String shopname, int grade, int review, String area, float street, int category, float longitude, float latitude) {
         this.ID = ID;
         this.storeimg = storeimg;
         this.shopname = shopname;
@@ -19,9 +21,27 @@ public class Restaurant {
         this.area = area;
         this.street = street;
         this.category = category;
+        this.longitude = longitude;
+        this.latitude = latitude;
     }
 
     public Restaurant() {
+    }
+
+    public float getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(float longitude) {
+        this.longitude = longitude;
+    }
+
+    public float getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(float latitude) {
+        this.latitude = latitude;
     }
 
     public int getID() {

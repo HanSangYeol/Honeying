@@ -55,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:id="@+id/inputidEdt"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -71,6 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/inputpwEdt"
                     android:paddingLeft="5dp"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
@@ -87,6 +90,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/checkpwEdt"
                     android:paddingLeft="5dp"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
@@ -102,6 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:id="@+id/inputemailEdt"
                     android:paddingLeft="5dp"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
@@ -117,6 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <CheckBox
+                    android:id="@+id/essentialChk1"
                     android:textSize="12sp"
                     android:text="만 14세 이상입니다"
                     android:layout_width="wrap_content"
@@ -133,6 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <CheckBox
+                    android:id="@+id/essentialChk2"
                     android:textSize="12sp"
                     android:text="이용약관 동의"
                     android:layout_width="wrap_content"
@@ -149,6 +157,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <CheckBox
+                    android:id="@+id/essentialChk3"
                     android:textStyle="bold"
                     android:textSize="12sp"
                     android:text="개인정보 수집 및 이용 동의"
@@ -361,6 +370,37 @@
                     android:layout_weight="2"></Spinner>
             </LinearLayout>
             <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:visibility="invisible"
+                    android:textColor="@color/textColor"
+                    android:gravity="center"
+                    android:text="생년월일"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/birthyearTxt"
+                    android:textColor="@color/softorange"
+                    android:textSize="9sp"
+                    android:paddingLeft="5dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+                <Spinner
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"></Spinner>
+                <Spinner
+                    android:visibility="invisible"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"></Spinner>
+            </LinearLayout>
+            <LinearLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -375,11 +415,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                     <RadioButton
+                        android:id="@+id/manRdo"
                         android:textColor="@color/textColor"
                         android:text="남자"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <RadioButton
+                        android:id="@+id/womanRdo"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/textColor"
                         android:text="여자"
@@ -394,6 +436,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <CheckBox
+                    android:id="@+id/allChk"
                     android:textColor="@color/textColor"
                     android:textStyle="bold"
                     android:text="전체동의"
@@ -406,18 +449,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="3">
                     <CheckBox
+                        android:id="@+id/optionChk1"
                         android:text="생년월일과 성별 수집 및 이용 동의"
                         android:textColor="@color/textColor"
                         android:textSize="12sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <CheckBox
+                        android:id="@+id/optionChk2"
                         android:text="이메일 마케팅 수신 동의"
                         android:textColor="@color/textColor"
                         android:textSize="12sp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <CheckBox
+                        android:id="@+id/optionChk3"
                         android:text="개인정보 유효기간 3년 지정(미동의 시 1년)"
                         android:textColor="@color/textColor"
                         android:textSize="12sp"

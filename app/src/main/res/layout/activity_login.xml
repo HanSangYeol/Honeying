@@ -40,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <EditText
+                android:singleLine="true"
                 android:layout_gravity="center"
                 android:id="@+id/inputidEdt"
                 android:layout_width="200dp"
@@ -57,6 +58,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <EditText
+                android:singleLine="true"
+                android:inputType="textPassword"
                 android:layout_gravity="center"
                 android:id="@+id/inputpwEdt"
                 android:layout_width="200dp"
@@ -68,6 +71,22 @@
                 android:textSize="14sp"
                 android:textStyle="bold"  />
         </android.support.design.widget.TextInputLayout>
+
+        <com.balysv.materialripple.MaterialRippleLayout
+            android:id="@+id/loginBtn"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/box_full_yellow"
+            android:layout_width="200dp"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="로그인"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </com.balysv.materialripple.MaterialRippleLayout>
 
         <LinearLayout
             android:layout_marginTop="10dp"
@@ -102,25 +121,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/passBtn"
-            android:textColor="@color/textColor"
-            android:textSize="14sp"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:text="건너뛰기"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-        <TextView
             android:id="@+id/signupBtn"
             android:textColor="@color/textColor"
             android:textSize="14sp"
             android:textStyle="bold"
             android:padding="10dp"
             android:text="회원가입"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/passBtn"
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:text="건너뛰기"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

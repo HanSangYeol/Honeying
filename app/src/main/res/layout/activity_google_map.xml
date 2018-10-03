@@ -51,9 +51,15 @@
         android:layout_height="1dp"
         android:background="@color/divider_gray_line" />
 
-    <fragment
-        android:id="@+id/mapFragment"
+    <LinearLayout
+        android:id="@+id/mapLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.google.android.gms.maps.MapFragment"/>
+        android:layout_height="match_parent">
+        <fragment
+            android:id="@+id/mapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            class="com.google.android.gms.maps.MapFragment"/>
+    </LinearLayout>
+
 </LinearLayout>

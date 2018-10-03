@@ -2,18 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="@color/lightgray"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".WriteReviewActivity">
 
     <FrameLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/backBtn"
@@ -23,129 +23,153 @@
             android:layout_marginRight="50dp"
             android:padding="10dp"
             android:src="@drawable/back" />
+
         <TextView
             android:id="@+id/restaurantTxt"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/textColor"
-            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="리뷰 작성"/>
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="리뷰 작성"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
     </FrameLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_gray_line" />
+
     <LinearLayout
-        android:background="@color/white"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+
         <TextView
-            android:padding="10dp"
-            android:textColor="@color/softorange"
-            android:gravity="center"
-            android:textSize="24sp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:text="평점"/>
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="평점"
+            android:textColor="@color/softorange"
+            android:textSize="24sp" />
+
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3">
+            android:layout_weight="3"
+            android:orientation="vertical">
+
             <LinearLayout
-                android:gravity="center|left"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center|left">
+
                 <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:textSize="12sp"
-                    android:textColor="@color/softorange"
+                    android:padding="5dp"
                     android:text="분위기"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/softorange"
+                    android:textSize="12sp" />
+
                 <RatingBar
-                    android:stepSize="1.0"
-                    android:rating="3"
+                    android:id="@+id/moodRating"
                     style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:numStars="5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="10"
+                    android:stepSize="1.0"
+                    android:theme="@style/RatingBar" />
             </LinearLayout>
+
             <LinearLayout
-                android:gravity="center|left"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center|left">
+
                 <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:textSize="12sp"
-                    android:textColor="@color/softorange"
                     android:text="맛"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/softorange"
+                    android:textSize="12sp" />
+
                 <RatingBar
-                    android:stepSize="1.0"
-                    android:rating="3"
+                    android:id="@+id/tasteRating"
                     style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:numStars="5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1.0"
+                    android:theme="@style/RatingBar" />
             </LinearLayout>
+
             <LinearLayout
-                android:gravity="center|left"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center|left">
+
                 <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:textSize="12sp"
-                    android:textColor="@color/softorange"
                     android:text="친절함"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content" />
+                    android:textColor="@color/softorange"
+                    android:textSize="12sp" />
+
                 <RatingBar
-                    android:stepSize="1.0"
-                    android:rating="3"
+                    android:id="@+id/kindRating"
                     style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:numStars="5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:stepSize="1.0"
+                    android:theme="@style/RatingBar" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
-        android:background="@color/white"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@color/white">
+
         <EditText
-            android:background="@color/white"
             android:id="@+id/inputreviewEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
             android:gravity="top"
-            android:textSize="14sp"
             android:hint="리뷰 내용"
             android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:textSize="14sp" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/okBtn"
-        android:background="@color/mainColor"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/mainColor">
+
         <TextView
-            android:textColor="@color/orange"
-            android:padding="10dp"
-            android:gravity="center"
-            android:text="리뷰 작성 완료"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="리뷰 작성 완료"
+            android:textColor="@color/orange" />
     </LinearLayout>
 </LinearLayout>

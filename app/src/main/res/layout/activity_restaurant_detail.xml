@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:background="@color/lightgray"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical"
     tools:context=".RestaurantDetailActivity">
 
     <FrameLayout
-        android:background="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="50dp"
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/backBtn"
@@ -22,197 +21,235 @@
             android:layout_marginRight="50dp"
             android:padding="10dp"
             android:src="@drawable/back" />
+
         <TextView
-            android:id="@+id/restaurantTxt"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:textColor="@color/textColor"
-            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="식당이름"/>
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp" />
     </FrameLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/divider_gray_line" />
 
-    <ImageView
-        android:id="@+id/restaurantImg"
-        android:layout_width="match_parent"
-        android:layout_height="170dp" />
-    <LinearLayout
-        android:background="@drawable/box_light_gray"
-        android:layout_margin="10dp"
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
-            android:padding="10dp"
             android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3">
-            <TextView
-                android:textSize="20sp"
-                android:text="가게 이름"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/restaurantImg"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/white"
+                android:scaleType="fitCenter" />
+
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/box_light_gray"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/restaurantTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="가게 이름"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="즐겨찾기"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/distanceTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="5"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="/"
+                            android:textColor="@color/textColor"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="리뷰"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/reviewTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="5"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="개"
+                            android:textColor="@color/divider_gray_line"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="평점"
+                        android:textColor="@color/softorange" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <RatingBar
+                            android:id="@+id/rating"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="true"
+                            android:numStars="5" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/favoriteBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/star_orange" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="즐겨찾기"
+                            android:textColor="@color/softorange"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/writereviewBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/comment" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="리뷰쓰기"
+                            android:textColor="@color/textColor"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                </com.balysv.materialripple.MaterialRippleLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white">
+
                 <TextView
-                    android:textColor="@color/divider_gray_line"
-                    android:textSize="12sp"
-                    android:text="즐겨찾기"
+                    android:id="@+id/areaTxt"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/divider_gray_line"
-                    android:textSize="12sp"
-                    android:text="5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/textColor"
-                    android:textSize="12sp"
-                    android:text="/"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/divider_gray_line"
-                    android:textSize="12sp"
-                    android:text="리뷰"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/divider_gray_line"
-                    android:textSize="12sp"
-                    android:text="5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:textColor="@color/divider_gray_line"
-                    android:textSize="12sp"
-                    android:text="개"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="상세 주소"
+                    android:textColor="@color/divider_gray_line" />
+                <LinearLayout
+                    android:id="@+id/mapLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+                    <fragment
+                        android:id="@+id/mapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        class="com.google.android.gms.maps.MapFragment"/>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="10dp"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="2">
-            <TextView
-                android:textColor="@color/softorange"
-                android:text="평점"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <LinearLayout
-                android:layout_marginTop="3dp"
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/star1"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"/>
-                <ImageView
-                    android:id="@+id/star2"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"/>
-                <ImageView
-                    android:id="@+id/star3"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"/>
-                <ImageView
-                    android:id="@+id/star4"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"/>
-                <ImageView
-                    android:id="@+id/star5"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"/>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:background="@color/white"
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.balysv.materialripple.MaterialRippleLayout
-            android:id="@+id/favoriteBtn"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <LinearLayout
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <ImageView
-                    android:src="@drawable/star_orange"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp" />
-                <TextView
-                    android:textSize="18sp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/softorange"
-                    android:text="즐겨찾기"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </com.balysv.materialripple.MaterialRippleLayout>
-        <com.balysv.materialripple.MaterialRippleLayout
-            android:id="@+id/writereviewBtn"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <LinearLayout
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <ImageView
-                    android:src="@drawable/comment"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp" />
-                <TextView
-                    android:textSize="18sp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/textColor"
-                    android:text="리뷰쓰기"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </com.balysv.materialripple.MaterialRippleLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:background="@color/white"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:textColor="@color/divider_gray_line"
-            android:padding="10dp"
-            android:text="상세 주소"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

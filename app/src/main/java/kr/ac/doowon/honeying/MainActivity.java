@@ -17,6 +17,7 @@ public class MainActivity extends BaseActivity {
     private android.support.design.widget.BottomNavigationView bottomNavi;
 
     long backPressedTimeInMillis = 0;
+    public static MainActivity mainActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void setValues() {
-
+        mainActivity = this;
     }
 
     @Override

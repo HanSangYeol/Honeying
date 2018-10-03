@@ -1,6 +1,8 @@
 package kr.ac.doowon.honeying.Data;
 
 public class Review {
+
+    private java.lang.String profile;
     private java.lang.String reviewImg;
     private java.lang.String reviewImg2;
     private java.lang.String reviewImg3;
@@ -11,7 +13,9 @@ public class Review {
     private java.lang.String reviewshopname;
     private java.lang.String reviewarea;
 
-    public Review(String reviewImg, String reviewImg2, String reviewImg3, String nickname, int goodPoint, int reviewContents, String reviewcomment, String reviewshopname, String reviewarea) {
+
+    public Review(String profile, String reviewImg, String reviewImg2, String reviewImg3, String nickname, int goodPoint, int reviewContents, String reviewcomment, String reviewshopname, String reviewarea) {
+        this.profile = profile;
         this.reviewImg = reviewImg;
         this.reviewImg2 = reviewImg2;
         this.reviewImg3 = reviewImg3;
@@ -97,4 +101,13 @@ public class Review {
     public void setReviewarea(String reviewarea) {
         this.reviewarea = reviewarea;
     }
+
+    public String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        this.profile = profile;
+    }
+
 }

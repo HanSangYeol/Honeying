@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.ac.doowon.honeying">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/bee"
@@ -9,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <meta-data
-            android:name="kr.ac.doowon.honeying.API_KEY"
-            android:value="AIzaSyDs-Nm9Eu2cAXeCfwZ2P7gkGzpsJyI3BbQ " />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDs-Nm9Eu2cAXeCfwZ2P7gkGzpsJyI3BbQ" />
 
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashActivity">
@@ -27,7 +31,9 @@
         <activity android:name=".RestaurantListActivity" />
         <activity android:name=".RestaurantDetailActivity" />
         <activity android:name=".WriteReviewActivity" />
-        <activity android:name=".GoogleMapActivity"></activity>
+        <activity android:name=".GoogleMapActivity">
+
+        </activity>
     </application>
 
 </manifest>

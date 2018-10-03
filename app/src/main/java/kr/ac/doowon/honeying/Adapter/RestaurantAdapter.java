@@ -7,6 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -24,9 +28,14 @@ public class RestaurantAdapter extends ArrayAdapter<Restaurant> {
         super(context, R.layout.list_item_restaurant, list);
         mContext = context;
         mList = list;
+
         inf = LayoutInflater.from(mContext);
     }
 
+    @Override
+    public int getCount() {
+        return mList.size();
+    }
 
     @NonNull
     @Override
@@ -36,13 +45,26 @@ public class RestaurantAdapter extends ArrayAdapter<Restaurant> {
             row = inf.inflate(R.layout.list_item_restaurant, null);
         }
 
+        Restaurant data = mList.get(position);
+
+        ImageView titleImg = (ImageView)row.findViewById(R.id.titleImg);
+        TextView restaurantTxt = (TextView)row.findViewById(R.id.restaurantTxt);
+        TextView areaTxt = (TextView)row.findViewById(R.id.areaTxt);
+        TextView ratingTxt = (TextView)row.findViewById(R.id.ratingTxt);
+        TextView reviewTxt = (TextView)row.findViewById(R.id.reviewTxt);
+        TextView distanceTxt = (TextView)row.findViewById(R.id.distanceTxt);
+
+        Glide.with(mContext).load(data.getStoreimg()).into(titleImg);
+        restaurantTxt.setText(data.getShopname());
+        areaTxt.setText(data.getArea());
+        ratingTxt.setText(data.getGrade()+"");
+        reviewTxt.setText(data.getReview()+"");
+        distanceTxt.setText(data.getStreet()+"");
+
         return row;
 
     }
 
 
-    @Override
-    public int getCount() {
-        return 20;
-    }
+
 }
