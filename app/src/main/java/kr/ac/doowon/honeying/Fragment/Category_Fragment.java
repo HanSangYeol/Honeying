@@ -75,7 +75,7 @@ public class Category_Fragment extends Fragment{
         Glide.with(getActivity()).load(R.drawable.food3).into(food3Img);
         Animation showIn = AnimationUtils.loadAnimation(getActivity(), android.R.anim.fade_in);
         bannerFlipper.setInAnimation(showIn);
-        bannerFlipper.setOutAnimation(getActivity(), android.R.anim.fade_out);
+        bannerFlipper.setOutAnimation(getActivity(), android.R.anim.slide_in_left);
         bannerFlipper.setFlipInterval(5000);//플리핑 간격(1000ms)
         bannerFlipper.startFlipping();
     }

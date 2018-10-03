@@ -59,6 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
                     android:background="@drawable/box_input_signup"
                     android:hint="아이디"
                     android:textColor="@color/textColor"
@@ -70,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:paddingLeft="5dp"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -85,6 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:paddingLeft="5dp"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -99,6 +102,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <EditText
+                    android:paddingLeft="5dp"
                     android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
@@ -175,23 +179,23 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="구분"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="5dp"
                         android:textSize="9sp"
                         android:text="선택"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
@@ -210,24 +214,24 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="목적"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
                         android:text="맞춤정보 제공, 마케팅"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
@@ -246,24 +250,24 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="항목"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
                         android:text="성별, 생년월일"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
@@ -282,24 +286,24 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="보유기간"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
                         android:text="회원탈퇴 후 5일까지"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
@@ -339,6 +343,7 @@
                     android:layout_height="wrap_content" />
                 <EditText
                     android:textSize="14sp"
+                    android:padding="5dp"
                     android:hint="태어난 년도"
                     android:background="@drawable/box_input_signup"
                     android:layout_width="0dp"
@@ -444,23 +449,23 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="구분"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:layout_marginLeft="5dp"
                         android:textSize="9sp"
                         android:text="선택"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
@@ -479,24 +484,24 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="목적"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
                         android:text="맞춤정보 제공, 마케팅"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
@@ -515,24 +520,24 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="항목"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
                         android:text="성별, 생년월일"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
@@ -551,24 +556,24 @@
                         android:layout_height="match_parent"
                         android:background="@color/textColor"/>
                     <TextView
-                        android:layout_gravity="center|left"
+                        android:gravity="center|left"
                         android:background="#EDEDED"
-                        android:layout_marginLeft="5dp"
+                        android:paddingLeft="5dp"
                         android:textColor="@color/textColor"
                         android:text="보유기간"
                         android:textSize="9sp"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"/>
                     <TextView
-                        android:layout_gravity="center|left"
-                        android:layout_marginLeft="5dp"
+                        android:gravity="center|left"
+                        android:paddingLeft="5dp"
                         android:textStyle="bold"
                         android:textSize="12sp"
                         android:text="회원탈퇴 후 5일까지"
                         android:textColor="@color/textColor"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight="3"/>
                     <TextView
                         android:layout_width="1dp"
