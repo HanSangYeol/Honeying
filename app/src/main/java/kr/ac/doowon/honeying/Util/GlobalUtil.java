@@ -117,14 +117,14 @@ public class GlobalUtil {
 
     public static void QUESTION_1_DATA(){
         QUESTION_1_LIST.clear();
-        QUESTION_1_LIST.add(new Question1(1, "가벼운 \n면 요리 어떠세요?"));
-        QUESTION_1_LIST.add(new Question1(2, "다양한 종류의 \n덮밥 요리 어떠세요?"));
-        QUESTION_1_LIST.add(new Question1(3, "든든하고 건강한 맛의 \n정식 요리 어떠세요?"));
+        QUESTION_1_LIST.add(new Question1(1, "다양한 종류의 \n덮밥 요리 어떠세요?"));
+        QUESTION_1_LIST.add(new Question1(2, "든든하고 건강한 맛의 \n정식 요리 어떠세요?"));
+        QUESTION_1_LIST.add(new Question1(3, "가벼운 \n면 요리 어떠세요?"));
     }
 
     public static void QUESTION_2_DATA(){
         QUESTION_2_LIST.clear();
-        QUESTION_2_LIST.add(new Question2(1, 1, true, "국물있는 면 요리로\n추천 해드릴까요?"));
+        QUESTION_2_LIST.add(new Question2(3, 1, true, "국물있는 면 요리로\n추천 해드릴까요?"));
     }
 
     public static void QUESTION_3_DATA(){

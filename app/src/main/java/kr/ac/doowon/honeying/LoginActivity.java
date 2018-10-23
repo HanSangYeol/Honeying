@@ -40,7 +40,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void setValues() {
-        scrollView.setAlpha(0.5f);
+        scrollView.setAlpha(0.7f);
         loginActivity = this;
     }
 
