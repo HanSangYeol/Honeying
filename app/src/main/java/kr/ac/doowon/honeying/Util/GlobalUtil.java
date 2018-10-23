@@ -3,6 +3,9 @@ package kr.ac.doowon.honeying.Util;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.ac.doowon.honeying.Data.Question.Question1;
+import kr.ac.doowon.honeying.Data.Question.Question2;
+import kr.ac.doowon.honeying.Data.Question.Question3;
 import kr.ac.doowon.honeying.Data.Restaurant;
 import kr.ac.doowon.honeying.Data.Review;
 import kr.ac.doowon.honeying.Data.User;
@@ -13,6 +16,9 @@ public class GlobalUtil {
     public static final List<Restaurant> RESTAURANT_LIST = new ArrayList<>();
     public static final List<Review> REVIEW_LIST = new ArrayList<>();
     public static final List<User> USER_LIST = new ArrayList<>();
+    public static final List<Question1> QUESTION_1_LIST = new ArrayList<>();
+    public static final List<Question2> QUESTION_2_LIST = new ArrayList<>();
+    public static final List<Question3> QUESTION_3_LIST = new ArrayList<>();
 
     public static void RESTAURANT_DATA(){
         RESTAURANT_LIST.clear();
@@ -107,6 +113,24 @@ public class GlobalUtil {
     public static void USER_DATA(){
         USER_LIST.clear();
         USER_LIST.add(new User(1,"admin", "1234", "samh2006@naver.com"));
+    }
+
+    public static void QUESTION_1_DATA(){
+        QUESTION_1_LIST.clear();
+        QUESTION_1_LIST.add(new Question1(1, "가벼운 \n면 요리 어떠세요?"));
+        QUESTION_1_LIST.add(new Question1(2, "다양한 종류의 \n덮밥 요리 어떠세요?"));
+        QUESTION_1_LIST.add(new Question1(3, "든든하고 건강한 맛의 \n정식 요리 어떠세요?"));
+    }
+
+    public static void QUESTION_2_DATA(){
+        QUESTION_2_LIST.clear();
+        QUESTION_2_LIST.add(new Question2(1, 1, true, "국물있는 면 요리로\n추천 해드릴까요?"));
+    }
+
+    public static void QUESTION_3_DATA(){
+        QUESTION_3_LIST.clear();
+        QUESTION_3_LIST.add(new Question3(1, 1, true, "맑은 국물의\n면 요리로 추천 해드릴까요?"));
+        QUESTION_3_LIST.add(new Question3(1, 1, false, "담백한\n면 요리로 추천 해드릴까요?"));
     }
 
 }
