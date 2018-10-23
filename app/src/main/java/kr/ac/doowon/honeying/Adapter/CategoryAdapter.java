@@ -16,8 +16,9 @@ import kr.ac.doowon.honeying.Fragment.Category.Snack_bar_Fragment;
 
 public class CategoryAdapter extends FragmentStatePagerAdapter {
 
-    final int PAGE_COUNT = 9;
+    final int PAGE_COUNT = 9; // 0:전체, 1:한식 , ... , 8:카페
 
+    // 생성자
     public CategoryAdapter(FragmentManager fm) {
         super(fm);
     }

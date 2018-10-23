@@ -82,12 +82,14 @@ public class Category_Fragment extends Fragment{
     }
 
     private void setEvents(){
+        // 카테고리 선택시
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), RestaurantListActivity.class);
+                // intent로 각 카테고리 넘버를 View에 Tag로 저장하여 넘김
                 intent.putExtra("categoryNumber", Integer.parseInt(view.getTag().toString()));
-                startActivityForResult(intent, RESULT_ACTIVITY);
+                startActivity(intent);
                 getActivity().overridePendingTransition(R.anim.rightin_activity, R.anim.not_move_activity);
             }
         };

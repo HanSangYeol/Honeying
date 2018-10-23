@@ -40,7 +40,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center|right"
-            android:padding="10dp"
+            android:padding="11dp"
             android:src="@drawable/filter" />
     </FrameLayout>
 
