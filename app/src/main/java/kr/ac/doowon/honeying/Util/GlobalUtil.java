@@ -133,4 +133,6 @@ public class GlobalUtil {
         QUESTION_3_LIST.add(new Question3(1, 1, false, "담백한\n면 요리로 추천 해드릴까요?"));
     }
 
+
+
 }

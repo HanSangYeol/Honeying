@@ -1,7 +1,10 @@
 package kr.ac.doowon.honeying;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
@@ -12,12 +15,18 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import kr.ac.doowon.honeying.Data.User;
-import kr.ac.doowon.honeying.Util.ContextUtil;
-import kr.ac.doowon.honeying.Util.GlobalUtil;
 
 public class SignUpActivity extends BaseActivity {
 
+    Connection con;
     long backPressedTimeInMillis = 0;
     User SignUpUser;
 
@@ -93,18 +102,20 @@ public class SignUpActivity extends BaseActivity {
                     CheckEmail = false;
                 }
                 if(CheckId && CheckPw && CheckSamePw && CheckEmail){
-                    SignUpUser = new User(1, inputidEdt.getText().toString(), inputpwEdt.getText().toString(), inputemailEdt.getText().toString());
-                    if (GlobalUtil.USER_LIST.contains(SignUpUser)){
-                        Toast.makeText(mContext, "이미 사용중인 아이디입니다.", Toast.LENGTH_SHORT).show();
-                    }else {
-                        GlobalUtil.USER_LIST.add(SignUpUser);
-                        ContextUtil.login(mContext, SignUpUser);
-                        Toast.makeText(mContext, "회원가입 완료\n자동 로그인되었습니다.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(mContext, MainActivity.class);
-                        startActivity(intent);
-                        LoginActivity.loginActivity.finish();
-                        finish();
-                    }
+                    DoSignUp sign = new DoSignUp();
+                    sign.execute("");
+//                    SignUpUser = new User(1, inputidEdt.getText().toString(), inputpwEdt.getText().toString(), inputemailEdt.getText().toString());
+//                    if (GlobalUtil.USER_LIST.contains(SignUpUser)){
+//                        Toast.makeText(mContext, "이미 사용중인 아이디입니다.", Toast.LENGTH_SHORT).show();
+//                    }else {
+//                        GlobalUtil.USER_LIST.add(SignUpUser);
+//                        ContextUtil.login(mContext, SignUpUser);
+//                        Toast.makeText(mContext, "회원가입 완료\n자동 로그인되었습니다.", Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(mContext, MainActivity.class);
+//                        startActivity(intent);
+//                        LoginActivity.loginActivity.finish();
+//                        finish();
+//                    }
                 }
             }
         });
@@ -181,6 +192,69 @@ public class SignUpActivity extends BaseActivity {
         }
 
         backPressedTimeInMillis = currentTimeInMillis;
+    }
+
+
+    public class DoSignUp extends AsyncTask<String, String, String> {
+        String str = "";
+        Boolean isSuccess = false;
+
+
+        @Override
+        protected void onPostExecute(String r) {
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                con = connectionclass();        // Connect to database
+                if (con == null) {
+                    str = "인터넷 접속 여부를 확인해주세요.";
+                } else {
+                    // Change below query according to your own database.
+                    String query = "select * from login where user_name= '" + inputidEdt.getText().toString() + "'";
+                    Statement stmt = con.createStatement();
+                    ResultSet rs = stmt.executeQuery(query);
+                    if (rs.next()) {
+                        str = "회원가입 실패\\n이미 사용중인 아이디 입니다.";
+                        isSuccess = true;
+                    } else {
+                        String insert_query = "INSERT INTO login (user_name, pass_word) VALUES ('" + inputidEdt.getText().toString() + "','"+ inputpwEdt.getText().toString() +"')";
+                        PreparedStatement statement = con.prepareStatement(insert_query);
+                        statement.executeUpdate();
+                        str = "회원가입 완료\\n자동 로그인되었습니다.";
+                        isSuccess = true;
+                    }
+                    con.close();
+                }
+            } catch (Exception ex) {
+                isSuccess = false;
+                str = ex.getMessage();
+            }
+            return str;
+        }
+    }
+
+
+    @SuppressLint("NewApi")
+    public Connection connectionclass() {
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+        Connection connection = null;
+        String ConnectionURL = null;
+        try {
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+            ConnectionURL = "jdbc:jtds:sqlserver://srhyun.doowon.ac.kr/honeying;user=sa;password=sa!t3;";
+            connection = DriverManager.getConnection(ConnectionURL);
+        } catch (SQLException se) {
+            Log.e("error here 1 : ", se.getMessage());
+        } catch (ClassNotFoundException e) {
+            Log.e("error here 2 : ", e.getMessage());
+        } catch (Exception e) {
+            Log.e("error here 3 : ", e.getMessage());
+        }
+        return connection;
     }
 
 }

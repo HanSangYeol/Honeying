@@ -22,13 +22,11 @@ import java.sql.Statement;
 
 import kr.ac.doowon.honeying.Data.User;
 import kr.ac.doowon.honeying.Util.ContextUtil;
-import kr.ac.doowon.honeying.Util.GlobalUtil;
 
 public class LoginActivity extends BaseActivity {
 
 
     Connection con;
-    String un,pass,db,ip;
 
     public static LoginActivity loginActivity;
     private ScrollingImageView scrollView;
@@ -46,10 +44,6 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ip = "192.168.25.93";
-        db = "honeying";
-        un = "honeying";
-        pass = "pass";
         bindView();
         setupEvents();
         setValues();
@@ -83,8 +77,6 @@ public class LoginActivity extends BaseActivity {
             public void onClick(View view) {
                 CheckLogin checkLogin = new CheckLogin();// this is the Asynctask, which is used to process in background to reduce load on app process
                 checkLogin.execute("");
-                Intent intent = new Intent(mContext, MainActivity.class);
-                startActivity(intent);
 //                if (inputidEdt.getText().toString().equals("")){
 //                    Toast.makeText(mContext, "아이디를 입력해주세요", Toast.LENGTH_SHORT).show();
 //                    if(inputpwEdt.getText().toString().equals("")){
@@ -129,60 +121,49 @@ public class LoginActivity extends BaseActivity {
         this.scrollView = (ScrollingImageView) findViewById(R.id.scrollView);
     }
 
-    public class CheckLogin extends AsyncTask<String,String,String>
-    {
+    public class CheckLogin extends AsyncTask<String, String, String> {
         String z = "";
         Boolean isSuccess = false;
 
 
-
         @Override
-        protected void onPostExecute(String r)
-        {
+        protected void onPostExecute(String r) {
             Toast.makeText(mContext, r, Toast.LENGTH_SHORT).show();
-            if(isSuccess)
-            {
-                Toast.makeText(mContext , "Login Successfull" , Toast.LENGTH_LONG).show();
+            if (isSuccess) {
+                Toast.makeText(mContext, "Login Successfull", Toast.LENGTH_LONG).show();
                 //finish();
             }
         }
+
         @Override
-        protected String doInBackground(String... params)
-        {
-            String usernam = inputidEdt.getText().toString();
-            String passwordd = inputpwEdt.getText().toString();
-            if(usernam.trim().equals("")|| passwordd.trim().equals(""))
+        protected String doInBackground(String... params) {
+            if (inputidEdt.getText().toString().trim().equals("") || inputpwEdt.getText().toString().trim().equals(""))
                 z = "아이디와 비밀번호를 입력해주세요.";
-            else
-            {
-                try
-                {
-                    con = connectionclass(un, pass, db, ip);        // Connect to database
-                    if (con == null)
-                    {
+            else {
+                try {
+                    con = connectionclass();        // Connect to database
+                    if (con == null) {
                         z = "인터넷 접속 여부를 확인해주세요.";
-                    }
-                    else
-                    {
+                    } else {
                         // Change below query according to your own database.
-                        String query = "select * from login where user_name= '" + usernam.toString() + "' and pass_word = '"+ passwordd.toString() +"'  ";
+                        String query = "select * from login where user_name= '" + inputidEdt.getText().toString() + "' and pass_word = '" + inputpwEdt.getText().toString() + "'  ";
                         Statement stmt = con.createStatement();
                         ResultSet rs = stmt.executeQuery(query);
-                        if(rs.next())
-                        {
+                        if (rs.next()) {
                             z = "로그인 성공";
-                            isSuccess=true;
+                            isSuccess = true;
                             con.close();
-                        }
-                        else
-                        {
+                            user = new User(1, inputidEdt.getText().toString(), inputpwEdt.getText().toString(), "samh2006@naver.com");
+                            ContextUtil.login(mContext, user);
+                            Intent intent = new Intent(mContext, MainActivity.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
                             z = "로그인 실패";
                             isSuccess = false;
                         }
                     }
-                }
-                catch (Exception ex)
-                {
+                } catch (Exception ex) {
                     isSuccess = false;
                     z = ex.getMessage();
                 }
@@ -193,28 +174,20 @@ public class LoginActivity extends BaseActivity {
 
 
     @SuppressLint("NewApi")
-    public Connection connectionclass(String user, String password, String database, String server)
-    {
+    public Connection connectionclass() {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         Connection connection = null;
         String ConnectionURL = null;
-        try
-        {
+        try {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            ConnectionURL = "jdbc:jtds:sqlserver://" + server + "/"+ database + ";user=" + user+ ";password=" + password + ";";
+            ConnectionURL = "jdbc:jtds:sqlserver://srhyun.doowon.ac.kr/honeying;user=sa;password=sa!t3;";
             connection = DriverManager.getConnection(ConnectionURL);
-        }
-        catch (SQLException se)
-        {
+        } catch (SQLException se) {
             Log.e("error here 1 : ", se.getMessage());
-        }
-        catch (ClassNotFoundException e)
-        {
+        } catch (ClassNotFoundException e) {
             Log.e("error here 2 : ", e.getMessage());
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             Log.e("error here 3 : ", e.getMessage());
         }
         return connection;
