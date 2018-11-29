@@ -46,7 +46,7 @@ public class LoginActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ip = "192.168.25.15";
+        ip = "192.168.25.93";
         db = "honeying";
         un = "honeying";
         pass = "pass";
