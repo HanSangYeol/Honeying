@@ -6,7 +6,6 @@ import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
@@ -83,6 +82,20 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
+        findidBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FindIDActivity.class);
+                startActivity(intent);
+            }
+        });
+        findpwBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, FindPWActivity.class);
                 startActivity(intent);
             }
         });

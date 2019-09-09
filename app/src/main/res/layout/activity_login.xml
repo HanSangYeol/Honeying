@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            android:src="@drawable/bee" />
+            android:src="@drawable/bee4" />
 
         <TextView
             android:layout_gravity="center"
@@ -78,7 +78,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp">
             <TextView
-                android:textColor="@color/textColor"
+                android:textColor="@color/mainBrown"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_gravity="center"
