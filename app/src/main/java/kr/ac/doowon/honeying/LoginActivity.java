@@ -2,10 +2,13 @@ package kr.ac.doowon.honeying;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,6 +31,7 @@ public class LoginActivity extends BaseActivity {
 
     Connection con;
 
+    float getdpi, setdpi;
     public static LoginActivity loginActivity;
     private ScrollingImageView scrollView;
     private EditText inputidEdt;
@@ -38,6 +42,8 @@ public class LoginActivity extends BaseActivity {
     private TextView signupBtn;
     private TextView passBtn;
 
+    int ScreenWidth;
+    int ScreenHeight;
     User user;
 
     @Override
@@ -51,7 +57,15 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void setValues() {
-        scrollView.setAlpha(0.7f);
+        scrollView.setAlpha(0.2f);
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        ScreenWidth = size.x;
+        ScreenHeight = size.y;
+        Log.e("heigth", ScreenHeight+"");
+        scrollView.setScaleX((ScreenHeight/355)-1);
+        scrollView.setScaleY((ScreenHeight/355)-1);
         loginActivity = this;
     }
 

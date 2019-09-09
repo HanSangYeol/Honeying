@@ -11,9 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:speed="0.1dp"
-        android:scaleX="1.2"
-        android:scaleY="3.1"
-        app:src="@drawable/background_login"/>
+        android:layout_gravity="center"
+        app:src="@drawable/background_login_2"/>
     <LinearLayout
         android:focusable="true"
         android:focusableInTouchMode="true"
